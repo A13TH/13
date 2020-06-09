@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <cmath>
 using namespace std;
-double doPloshad(int a,int b, int c, double S)
+double doPloshad(double a, double b, double c, double S)
 {   
 	if (a == b || b == c || a == c) //eсли a или b или c равны, то есть две из трех сторон треугольника равны, то это равнобедренный треугольник;
 	{
@@ -26,7 +26,7 @@ double doPloshad(int a,int b, int c, double S)
 		if (b != a && b == c)
 		{
 			cout << "Osnova:" << a << endl;
-			S = a / 4 * (sqrt(4 * pow(a, 2) - pow(b, 2)));
+			S = a / 4 * (sqrt(4 * pow(b, 2) - pow(a, 2)));
 			cout << S << endl;
 		}
 		else
@@ -36,7 +36,7 @@ double doPloshad(int a,int b, int c, double S)
 		if (c == a && c != b)
 		{
 			cout << "Osnova:" << b << endl;
-			S = b / 4 * (sqrt(4 * pow(b, 2) - pow(c, 2)));
+			S = b / 4 * (sqrt(4 * pow(c, 2) - pow(b, 2)));
 			cout << S << endl;
 		}
 		else
@@ -49,13 +49,13 @@ double doPloshad(int a,int b, int c, double S)
 int main()
 {
 	cout << "Enter side A" << endl;
-	int a;
+	double a;
 	cin >> a;
 	cout << "Enter side B" << endl;
-	int b;
+	double b;
 	cin >> b;
 	cout << "Enter side C" << endl;
-	int c;
+	double c;
 	cin >> c;
 	double S;
 	S = 0;
