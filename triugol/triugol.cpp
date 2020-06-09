@@ -3,6 +3,14 @@
 using namespace std;
 double doPloshad(int a,int b, int c, double S)
 {   
+	if (a == b || b == c || a == c) //eсли a или b или c равны, то есть две из трех сторон треугольника равны, то это равнобедренный треугольник;
+	{
+		cout << "yes epte" << endl; ;
+	}
+	else
+	{
+		cout << "no epte" << endl;
+	}
 	if (a == b || b == c || a == c) 
 	{
 		if (a == b && a != c )
@@ -51,17 +59,7 @@ int main()
 	cin >> c;
 	double S;
 	S = 0;
-	if (a == b || b == c || a == c) //eсли a или b или c равны, то есть две из трех сторон треугольника равны, то это равнобедренный треугольник;
-	{
-		cout << "yes epte" << endl; ;
-	}
-	else 
-	{
-		cout << "no epte" << endl;
-	}
 
 	doPloshad(a,b,c,S);
-	
-
 	return 0;
 }
